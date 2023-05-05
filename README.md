@@ -3,18 +3,25 @@
 </p>
 
 # Prediction-of-Product-Sales
-Predicting the sales of various objects.
+## Predicting the sales of various objects.
 
 **Author**: 
 Aharon Brenes 
+
 ### Business problem:
 
-Here is where you state the business problem you were trying to solve
+Accurate sales predictions can help businesses optimize their inventory management, pricing strategy, and overall revenue. The dataset used includes features such as product type, price, and promotion status, as well as external factors like holidays and economic indicators. The notebook uses machine learning techniques to build a predictive model for product sales, providing businesses with a valuable tool to improve sales forecasting accuracy and make data-driven decisions to optimize their operations.
 
 
-### Data:
-Data can include source and high-level description (e.g. # obs)
+### Data Source:
+Big Mart Sales Prediction from Analytics Vidhya
+https://datahack.analyticsvidhya.com/contest/practice-problem-big-mart-sales-iii/
 
+## Data Dictionary
+
+<p align = "center"> 
+  <img src = "Data Dictionary.png">
+</p>
 
 ## Methods
 - Data preparation steps with explanation and justification for choices
