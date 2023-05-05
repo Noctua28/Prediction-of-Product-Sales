@@ -40,7 +40,7 @@ Model evaluation using R^2 and RMSE metrics.
 
 
 
-**Location Type: **The location of the store plays an important role in the sales of products. In our dataset, we found that products sold at stores located in Tier 1 cities have higher sales compared to products sold at stores located in Tier 2 and Tier 3 cities.
+**Location Type:** The location of the store plays an important role in the sales of products. In our dataset, we found that products sold at stores located in Tier 1 cities have higher sales compared to products sold at stores located in Tier 2 and Tier 3 cities.
 
 #### Sales by Item Type
 
