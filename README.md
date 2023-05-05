@@ -1,7 +1,11 @@
+<p align = "center"> 
+  <img src = "Data Science cover.png">
+</p>
+
 # Prediction-of-Product-Sales
 Predicting the sales of various objects.
 **Author**: 
-
+Aharon Brenes 
 ### Business problem:
 
 Here is where you state the business problem you were trying to solve
@@ -46,6 +50,4 @@ More of your own text here
 
 
 ### For further information
-
-
-For any additional questions, please contact **email**
+For any additional questions, please contact aharon.brenes@gmail.com
