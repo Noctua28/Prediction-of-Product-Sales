@@ -25,10 +25,15 @@ There is a need for sales predictions to help businesses optimize their inventor
 
 ## Methods
 Data exploration and visualization
+
 Data preprocessing techniques including handling missing values and categorical features, and scaling/normalization
+
 Linear regression modeling to predict sales
+
 Decision tree modeling to predict sales
+
 Random forest modeling to predict sales
+
 Model evaluation using R^2 and RMSE metrics.
 
 ## Results
