@@ -24,11 +24,6 @@ There is a need for sales predictions to help businesses optimize their inventor
 </p>
 
 ## Methods
-- Data preparation steps with explanation and justification for choices
-- 
-
-## Results
-
 Data exploration and visualization
 Data preprocessing techniques including handling missing values and categorical features, and scaling/normalization
 Linear regression modeling to predict sales
@@ -36,12 +31,16 @@ Decision tree modeling to predict sales
 Random forest modeling to predict sales
 Model evaluation using R^2 and RMSE metrics.
 
+## Results
+
 #### Sales by Location Type
 <p align = "center"> 
   <img src = "Sales by Product Type.png">
 </p>
 
-Location Type: The location of the store plays an important role in the sales of products. In our dataset, we found that products sold at stores located in Tier 1 cities have higher sales compared to products sold at stores located in Tier 2 and Tier 3 cities.
+
+
+**Location Type: **The location of the store plays an important role in the sales of products. In our dataset, we found that products sold at stores located in Tier 1 cities have higher sales compared to products sold at stores located in Tier 2 and Tier 3 cities.
 
 #### Sales by Item Type
 
@@ -49,7 +48,9 @@ Location Type: The location of the store plays an important role in the sales of
   <img src = "Location type.png">
 </p>
 
-Item Type: The type of product also has a significant impact on its sales. In our dataset, we found that certain types of products such as "Health and Hygiene" and "Household" have higher sales compared to other types of products.
+
+
+**Item Type:** The type of product also has a significant impact on its sales. In our dataset, we found that certain types of products such as "Health and Hygiene" and "Household" have higher sales compared to other types of products.
 
 ## Model
 
