@@ -31,7 +31,7 @@ There is a need for sales predictions to help businesses optimize their inventor
 
 Our Linear Regression model identified several impactful features.
 
-<img src = "C:\Users\aharo\OneDrive\Documents\GitHub\Prediction-of-Product-Sales\Linear Regression.png">
+![image](https://github.com/Noctua28/Prediction-of-Product-Sales/assets/65126638/84cd5ab3-e5c1-4a28-a5c5-cebb3051183f)
 
 Here are interpretations of the top 3 most impactful features:
 
@@ -49,7 +49,8 @@ Here are interpretations of the top 3 most impactful features:
 
 Our Random Forest model provided an analysis of feature importances.
 
-<img src = "C:\Users\aharo\OneDrive\Documents\GitHub\Prediction-of-Product-Sales\Tree Based Regression.png">
+![image](https://github.com/Noctua28/Prediction-of-Product-Sales/assets/65126638/6632637f-9839-483f-8a46-0c33fdd05b91)
+
 
 Here are interpretations of the top 5 most important features:
 
