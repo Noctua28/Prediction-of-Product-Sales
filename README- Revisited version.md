@@ -72,6 +72,31 @@ Here are interpretations of the top 5 most important features:
 
 5. Item_Visibility: Similar to the interpretation in the Linear Regression Model, the importance of this feature in the Random Forest Model suggests that the visibility of an item in a store significantly influences the sales of the item.
 
+## Bar Plot
+
+![image](https://github.com/Noctua28/Prediction-of-Product-Sales/assets/65126638/ffa6099a-8a0d-4a58-8991-f7653ca2e439)
+
+This plot represents the average impact of each feature on the model's output. The y-axis shows the names of the features, and the x-axis represents the average absolute SHAP value, a measure of the magnitude of a feature's effect on the output. The larger the SHAP value, the higher the impact of the feature on the model's prediction.
+
+The SHAP values and Random Forest's feature importance don't completely align, and here's why:
+
+1. SHAP values take into account not only the direct impact of a feature on the output but also its interaction with other features. This makes SHAP values a more comprehensive measure of feature importance.
+
+
+2. The Random Forest model rates Item_MRP as the most important feature, while SHAP values rank Outlet_Type_Supermarket Type3 at the top. This could be because traditional feature importance measures like those from a Random Forest may be biased towards variables that have more categories or are numeric.
+
+
+## Dot Plot
+
+![image](https://github.com/Noctua28/Prediction-of-Product-Sales/assets/65126638/5c38ac2f-7158-436c-96c8-037284b0a952)
+
+This plot shows the impact of each feature on the model's prediction for individual instances. Each dot represents an instance (or a row) from the dataset. The color represents the feature's value (high in red, low in blue). The position on the x-axis shows whether the effect of that value is associated with a higher or lower prediction.
+
+1. Outlet_Type_Supermarket Type3: This feature has the most significant impact on sales. If a store is a "Supermarket Type3", it tends to be associated with higher sales. Conversely, if a store is not of this type, it is likely to have lower sales.
+
+2. Item_MRP: This is the price of the product. More expensive items (Item_MRP high, shown in red) are associated with higher sales, while cheaper items (low Item_MRP, shown in blue) tend to have lower sales.
+
+3. Outlet_Type_Grocery Store: If an outlet is a grocery store, it is likely to have lower sales. If it's not a grocery store, the sales are likely to be higher.
 
 ### For further information
 For any additional questions, please contact aharon.brenes@gmail.com
