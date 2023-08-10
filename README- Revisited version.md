@@ -31,72 +31,48 @@ There is a need for sales predictions to help businesses optimize their inventor
 
 Our Linear Regression model identified several impactful features.
 
-![image](https://github.com/Noctua28/Prediction-of-Product-Sales/assets/65126638/84cd5ab3-e5c1-4a28-a5c5-cebb3051183f)
+![image](https://github.com/Noctua28/Prediction-of-Product-Sales/assets/65126638/63af4af2-fda9-436e-a905-f5133e63eb17)
 
 Here are interpretations of the top 3 most impactful features:
 
-1. Item_MRP: This feature represents the Maximum Retail Price (MRP) of the item. If the coefficient for this feature is positive, it means that items with a higher MRP are likely to have higher sales, assuming all other features remain constant. On the other hand, if the coefficient is negative, it would suggest that as the MRP of an item increases, the sales for that item are likely to decrease, assuming all other factors remain constant.
+1. Outlet_Type_Grocery Store (Coefficient: -1726.6760):
 
+Interpretation: For every unit increase in the presence of a grocery store outlet type (i.e., if an item is sold in a grocery store), the predicted sales decrease by approximately 1726.68 units of currency. This suggests that selling an item in a grocery store is associated with lower sales compared to other outlet types.
 
+2. Outlet_Type_Supermarket Type3 (Coefficient: 1610.5642):
 
-2. Outlet_Type_Supermarket Type3: This feature is a result of one-hot encoding of the Outlet_Type category. A positive coefficient for this feature would mean that items sold in "Supermarket Type3" outlets tend to have higher sales compared to other types of outlets, assuming all other factors remain constant. A negative coefficient would suggest the opposite.
+Interpretation: For every unit increase in the presence of a Supermarket Type3 outlet (i.e., if an item is sold in a Supermarket Type3), the predicted sales increase by approximately 1610.56 units of currency. This indicates that selling an item in a Supermarket Type3 is associated with higher sales compared to other outlet types.
 
+3. Item_Visibility (Coefficient: -464.6734):
 
-
-3. Item_Visibility: This feature represents the percentage of total display area of all products in a store allocated to the particular product. A negative coefficient for this feature would mean that as the visibility of an item increases (i.e., it occupies a larger percentage of the display area), the sales for that item tend to decrease, assuming all other factors remain constant. This could be due to the product being too common or not having enough appeal. A positive coefficient would suggest that higher visibility leads to higher sales, as the product is more noticeable to customers.
+Interpretation: For every unit increase in item visibility (measured as the percentage of display area allocated to the item in a store), the predicted sales decrease by approximately 464.67 units of currency. This may seem counterintuitive, as we might expect higher visibility to lead to higher sales. However, this negative coefficient could be capturing other factors or relationships in the data, such as discounts on highly visible items leading to lower overall revenue. It would be valuable to investigate this relationship further.
 
 ### Random Forest
 
 Our Random Forest model provided an analysis of feature importances.
 
-![image](https://github.com/Noctua28/Prediction-of-Product-Sales/assets/65126638/6632637f-9839-483f-8a46-0c33fdd05b91)
-
+![image](https://github.com/Noctua28/Prediction-of-Product-Sales/assets/65126638/80d8ed07-3203-44ef-b5d0-4c4db260d9d0)
 
 Here are interpretations of the top 5 most important features:
 
-1. Item_MRP: Similar to the interpretation in the Linear Regression Model, this feature's importance in the Random Forest Model suggests that the MRP of an item plays a significant role in predicting the sales of the item.
+1. Item_MRP (Maximum Retail Price):
+   
+Interpretation: The maximum retail price of an item is a crucial factor in determining its sales. Higher-priced items may generate more revenue, while lower-priced items may appeal to budget-conscious customers. The importance of this feature suggests that pricing strategies can significantly influence product sales.
 
+2.Outlet_Type_Grocery Store:
 
+Interpretation: The type of outlet, specifically whether it is a grocery store, plays a significant role in sales. Items sold in grocery stores may experience different sales patterns compared to other outlet types. This could be due to the types of products typically found in grocery stores or the shopping behavior of customers in these stores.
 
-2. Outlet_Type_Supermarket Type3: Similar to the interpretation in the Linear Regression Model, the importance of this feature in the Random Forest Model suggests that the type of outlet in which an item is sold significantly influences the sales of the item.
+3.Item_Visibility:
 
+Interpretation: How visible an item is within the store affects its sales. Highly visible items may catch customers' attention more easily, but as noted in the linear regression interpretation, there may be complex factors at play. Understanding how to optimize product placement and visibility could enhance sales performance.
 
+4. Outlet_Type_Supermarket Type3:
 
-3. Item_Weight: The importance of this feature suggests that the weight of the item significantly influences its sales. This could be because heavier items might be bulk goods or premium products, which could either increase or decrease sales depending on the context.
+Interpretation: Similar to the grocery store outlet type, the presence of a Supermarket Type3 outlet influences sales. This outlet type may offer a different shopping experience, product selection, or pricing structure that attracts a specific customer base. Understanding the characteristics of different supermarket types can help in tailoring marketing and sales strategies.
 
+5. Item_Weight:
 
+Interpretation: The weight of an item is also identified as an important feature. The weight may be indicative of the product's size, quantity, or quality, all of which could influence consumer purchasing decisions. Heavier items might be associated with bulk products or higher quality, while lighter items might be more convenient for certain customers.
 
-4. Outlet_Establishment_Year: The importance of this feature suggests that the year the outlet was established plays a significant role in predicting sales. Older outlets may have a loyal customer base leading to higher sales, or they might have lower sales due to being outdated.
-
-
-
-5. Item_Visibility: Similar to the interpretation in the Linear Regression Model, the importance of this feature in the Random Forest Model suggests that the visibility of an item in a store significantly influences the sales of the item.
-
-## Bar Plot
-
-![image](https://github.com/Noctua28/Prediction-of-Product-Sales/assets/65126638/ffa6099a-8a0d-4a58-8991-f7653ca2e439)
-
-This plot represents the average impact of each feature on the model's output. The y-axis shows the names of the features, and the x-axis represents the average absolute SHAP value, a measure of the magnitude of a feature's effect on the output. The larger the SHAP value, the higher the impact of the feature on the model's prediction.
-
-The SHAP values and Random Forest's feature importance don't completely align, and here's why:
-
-1. SHAP values take into account not only the direct impact of a feature on the output but also its interaction with other features. This makes SHAP values a more comprehensive measure of feature importance.
-
-
-2. The Random Forest model rates Item_MRP as the most important feature, while SHAP values rank Outlet_Type_Supermarket Type3 at the top. This could be because traditional feature importance measures like those from a Random Forest may be biased towards variables that have more categories or are numeric.
-
-
-## Dot Plot
-
-![image](https://github.com/Noctua28/Prediction-of-Product-Sales/assets/65126638/5c38ac2f-7158-436c-96c8-037284b0a952)
-
-This plot shows the impact of each feature on the model's prediction for individual instances. Each dot represents an instance (or a row) from the dataset. The color represents the feature's value (high in red, low in blue). The position on the x-axis shows whether the effect of that value is associated with a higher or lower prediction.
-
-1. Outlet_Type_Supermarket Type3: This feature has the most significant impact on sales. If a store is a "Supermarket Type3", it tends to be associated with higher sales. Conversely, if a store is not of this type, it is likely to have lower sales.
-
-2. Item_MRP: This is the price of the product. More expensive items (Item_MRP high, shown in red) are associated with higher sales, while cheaper items (low Item_MRP, shown in blue) tend to have lower sales.
-
-3. Outlet_Type_Grocery Store: If an outlet is a grocery store, it is likely to have lower sales. If it's not a grocery store, the sales are likely to be higher.
-
-### For further information
-For any additional questions, please contact aharon.brenes@gmail.com
+For more information contact Aharon Brenes (aharon.brenes@gmail.com)
