@@ -75,4 +75,62 @@ Interpretation: Similar to the grocery store outlet type, the presence of a Supe
 
 Interpretation: The weight of an item is also identified as an important feature. The weight may be indicative of the product's size, quantity, or quality, all of which could influence consumer purchasing decisions. Heavier items might be associated with bulk products or higher quality, while lighter items might be more convenient for certain customers.
 
+### Explaining our tree-based model with SHAP
+
+****![image](https://github.com/Noctua28/Prediction-of-Product-Sales/assets/65126638/3a23fae5-8865-4f27-a157-183ba63cf416)
+
+The bar summary plot shows the average magnitude of the SHAP values for each feature, providing a global view of feature importance. The y-axis shows the names of the features, and the x-axis represents the average absolute SHAP value, a measure of the magnitude of a feature's effect on the output. The larger the SHAP value, the higher the impact of the feature on the model's prediction.
+
+![image](https://github.com/Noctua28/Prediction-of-Product-Sales/assets/65126638/c4656aa0-4f6a-418e-a9c3-5b8648e7e8e0)
+
+The dot summary plot shows the SHAP values for individual data points, allowing us to understand how each feature influences individual predictions.
+
+1. Item_MRP
+
+Item MRP (Maximum Retail Price) is the first most important feature.
+
+In the dot summary plot, we can examine the distribution of SHAP values for this feature. If the values are mostly positive, it indicates that higher MRP generally leads to higher predicted sales. If they are tightly clustered, the influence is consistent across different data points.
+
+2. Outlet_Type_Supermarket Type3
+
+Outlet Type: Supermarket Type3 is the second most important feature.
+
+Look at the spread of SHAP values for this feature in the dot summary plot. If the values are mostly positive, it may indicate that this type of supermarket has a positive influence on predicted sales. The spread of the values can indicate whether this influence is consistent or varies.
+
+3. Outlet_Type_Grocery Store
+
+Outlet Type: Grocery Store is the third most important feature.
+
+Similar to the previous feature, you can interpret its influence by examining the distribution of SHAP values in the dot summary plot. A mostly negative spread may indicate that this outlet type tends to lower predicted sales.
+
+Summary
+These three features appear to have significant influence on the model's predictions:
+
+- Item MRP: Likely has a strong and possibly consistent influence on sales predictions.
+- Outlet Types: Different types of outlets (Supermarket Type3 and Grocery Store) may have distinct effects on sales predictions, reflecting the differences in shopping behavior at various types of stores.
+
+## LIME Tabular Explanation 
+
+![image](https://github.com/Noctua28/Prediction-of-Product-Sales/assets/65126638/d2958c8b-61fc-49f9-8291-5b21caa4f161)
+
+![image](https://github.com/Noctua28/Prediction-of-Product-Sales/assets/65126638/9e838996-e0c9-459b-b767-50525953b83f)
+
+1. Low Sales Example: Features with significant negative contributions, as these may be the factors leading to lower sales. Likewise, features with positive contributions might still be encouraging sales but are not enough to result in high sales.
+
+
+2. High Sales Example: Features with positive contributions are likely driving the high sales in this example. Analyze how these features differ from those in the low sales example to understand what factors are most influential.
+
+## Interpretation Individual Force Plots 
+
+![image](https://github.com/Noctua28/Prediction-of-Product-Sales/assets/65126638/2ae02c38-fd11-4947-a9ee-7e5caa4d77be)
+
+1. Red vs. Blue: In a SHAP force plot, red features push the prediction higher, while blue features push it lower. You can analyze the balance between red and blue to understand what's driving the prediction.
+
+
+2. Low Sales Example: Look for strong blue forces that might be pulling the prediction down, leading to low sales.
+
+
+3. High Sales Example: Look for strong red forces that might be pushing the prediction up, leading to high sales.
+
+
 For more information contact Aharon Brenes (aharon.brenes@gmail.com)
